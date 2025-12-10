@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta charset="UTF-8" /&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt;</span></p>
+<p class="p1"><span class="s1">&lt;title&gt;Ban ABA Empowerment Guide&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1">&lt;style&gt;</span></p>
+<p class="p1"><span class="s1">:root{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>--ban-primary:#5b6bff;--ban-accent:#2de39f;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>--ban-bg:#0e0f12;--ban-panel:#171a21;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>--ban-text:#e9ecf1;--ban-muted:#aab3c2;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background:var(--ban-bg);color:var(--ban-text);padding:1rem;}</span></p>
+<p class="p1"><span class="s1">#banaba-chatbot *{box-sizing:border-box}</span></p>
+<p class="p1"><span class="s1">#banaba-chatbot{max-width:720px;margin:0 auto;border:1px solid #1f2430;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius:16px;padding:16px;background:var(--ban-bg);}</span></p>
+<p class="p1"><span class="s1">.ban-header{display:flex;align-items:center;gap:10px;margin-bottom:12px}</span></p>
+<p class="p1"><span class="s1">.ban-logo{width:36px;height:36px;border-radius:8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background:linear-gradient(135deg,var(--ban-primary),var(--ban-accent))}</span></p>
+<p class="p1"><span class="s1">.ban-title{font-weight:700;font-size:18px}</span></p>
+<p class="p1"><span class="s1">.ban-sub{color:var(--ban-muted);font-size:13px}</span></p>
+<p class="p1"><span class="s1">.ban-panel{background:var(--ban-panel);border:1px solid #232a39;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius:14px;padding:14px;margin:12px 0}</span></p>
+<p class="p1"><span class="s1">.ban-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}</span></p>
+<p class="p1"><span class="s1">.ban-btn{background:#11141a;color:var(--ban-text);border:1px solid #2a3346;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius:999px;padding:8px 12px;font-size:13px;cursor:pointer}</span></p>
+<p class="p1"><span class="s1">.ban-btn:hover{border-color:var(--ban-accent)}</span></p>
+<p class="p1"><span class="s1">.ban-cta{background:var(--ban-primary);border:none;color:#fff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding:8px 12px;border-radius:10px;font-weight:600;cursor:pointer}</span></p>
+<p class="p1"><span class="s1">.ban-cta.alt{background:#182044;color:#cfe0ff;border:1px solid #31448a}</span></p>
+<p class="p1"><span class="s1">.ban-log{display:flex;flex-direction:column;gap:10px;margin-top:8px}</span></p>
+<p class="p1"><span class="s1">.ban-msg{background:#0f1218;border:1px solid #1e2431;border-radius:12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding:10px;font-size:14px}</span></p>
+<p class="p1"><span class="s1">.ban-msg.system{background:#111826;border-color:#27314a}</span></p>
+<p class="p1"><span class="s1">.ban-row{display:flex;gap:8px;margin-top:10px}</span></p>
+<p class="p1"><span class="s1">.ban-input{flex:1;background:#0f1218;color:var(--ban-text);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border:1px solid #2a3346;border-radius:10px;padding:10px}</span></p>
+<p class="p1"><span class="s1">.ban-small{font-size:12px;color:var(--ban-muted)}</span></p>
+<p class="p1"><span class="s1">@media(max-width:560px){.ban-sub{display:none}}</span></p>
+<p class="p1"><span class="s1">&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div id="banaba-chatbot"&gt;Loading…&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;script&gt;</span></p>
+<p class="p1"><span class="s1">document.addEventListener("DOMContentLoaded",function(){</span></p>
+<p class="p1"><span class="s1">const EL=document.getElementById("banaba-chatbot");</span></p>
+<p class="p1"><span class="s1">if(!EL)return;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">const TOPICS=[</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>{id:"iep",label:"School / IEP",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>intro:"Let’s start by unpacking your IEP goals together. What’s coming up in your meeting or documentation that feels unclear or unfair?",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>follow:"Would you like to draft language for your next meeting or parent input letter?"},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>{id:"sdp",label:"Self Determination",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>intro:"Okay, we’ll focus on the Self-Determination Program. Let’s clarify where you are in the process and how to structure your IPP or PCP around your autonomy.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>follow:"Would you like help outlining your person-centered plan or self-direction goals?"},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>{id:"transition",label:"Transition to Adulthood",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>intro:"Let’s look ahead to adulthood supports and services. We can map out independent living, employment, and advocacy priorities at your pace.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>follow:"Would you like to build a checklist for transition milestones?"},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>{id:"aba",label:"ABA pressure",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>intro:"Let’s take a deep breath together. You’re not wrong for questioning what’s being pushed. Tell me what kind of pressure or language they’re using.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>follow:"Do you want to practice how to say no to ABA or request alternative supports?"},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>{id:"musical",label:"My child is very musical",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>intro:"Wonderful! Music is a strength and a regulation tool. Let’s explore how to include that in your IEP or PCP goals meaningfully.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>follow:"Would you like help drafting a goal that honors your child’s musical interests?"},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>{id:"comm",label:"Communication Options",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>intro:"Communication is a right, not a reward. Let’s identify which AAC or multimodal methods best support your or your child’s authentic voice.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>follow:"Would you like to list the communication methods you want documented in your plan?"},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>{id:"peers",label:"Autistic Peer Support",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>intro:"Peer connection matters. Let’s find spaces and supports where autistic voices lead the conversation safely.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>follow:"Would you like to see trusted peer-led communities or resources?"}</span></p>
+<p class="p1"><span class="s1">];</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">let state={log:load()||[],currentTopic:null};</span></p>
+<p class="p1"><span class="s1">function load(){try{return JSON.parse(localStorage.getItem("banaba_session_v1")||"[]");}catch(e){return[];}}</span></p>
+<p class="p1"><span class="s1">function save(){localStorage.setItem("banaba_session_v1",JSON.stringify(state.log));}</span></p>
+<p class="p1"><span class="s1">function push(role,text){state.log.push({role,text,ts:Date.now()});save();render();}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">function exportTxt(){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const lines=state.log.map(m=&gt;`[${new Date(m.ts).toISOString()}] ${m.role.toUpperCase()}: ${m.text}`).join("\\n");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const blob=new Blob([lines],{type:"text/plain"});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const a=document.createElement("a");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>a.href=URL.createObjectURL(blob);a.download="banaba-notes.txt";a.click();</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">function clearSession(){state.log=[];save();render();announceGreeting();}</span></p>
+<p class="p1"><span class="s1">function announceGreeting(){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>if(state.log.length===0){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>push("system","Hi! Autistic Dr. Henny has programmed this chatbot with the #banABA philosophies to empower you. Ask away. You’re safe to share what’s happening. Let’s take it one step at a time. What’s happening right now that you need help with?");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">function pickTopic(t){state.currentTopic=t.id;push("assistant","Topic selected: "+t.label);push("assistant",t.intro);push("assistant",t.follow+" (yes/no)");}</span></p>
+<p class="p1"><span class="s1">function handleUserInput(val){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>if(!val.trim())return;push("user",val.trim());</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>const topic=TOPICS.find(x=&gt;x.id===state.currentTopic);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>if(!topic){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>const guess=TOPICS.find(t=&gt;val.toLowerCase().includes(t.label.toLowerCase().split(" ")[0]));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>if(guess){pickTopic(guess);return;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>push("assistant","Thanks for sharing. You can tap a topic button above to get targeted help, or tell me more about what’s happening.");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>if(/(^|\\s)yes\\b/i.test(val)){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>switch(topic.id){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>case"iep":push("assistant","Starter language:\\n“Please note my Parent Input: We request the team consider supports that reduce harm and respect autonomy. We decline compliance-based goals and request sensory/regulation supports aligned with our child’s strengths.”");break;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>case"sdp":push("assistant","PCP outline:\\n• Who I am &amp; how I communicate\\n• What a good day looks like\\n• Supports that help (non-ABA)\\n• Risks to avoid\\n• Autonomy goals\\n• Budget categories I value");break;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>case"transition":push("assistant","Transition checklist:\\n• Agency contacts\\n• Benefits planning\\n• Transportation\\n• Work/education plan\\n• Housing prefs\\n• Self-advocacy &amp; decision-making supports");break;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>case"aba":push("assistant","Refusal script:\\n“We decline ABA. Please document our refusal without retaliation. We request trauma-informed, relationship-based supports that honor autonomy and sensory needs.”");break;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>case"musical":push("assistant","Goal idea:\\n“Given access to music-based regulation tools, student will self-initiate a 3–5 min music break to co-regulate during challenging tasks in 4/5 opportunities.”");break;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>case"comm":push("assistant","Document methods (AAC app, gestures, typing). Add: “Communication is not contingent on compliance; access is continuous across environments.”");break;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>case"peers":push("assistant","Seek peer-led communities where autistic voices lead. I can suggest categories and safety signs to look for.");break;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>push("assistant","Want to add this to your notes or keep drafting?");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>}else if(/(^|\\s)no\\b/i.test(val)){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>push("assistant","Okay. Tell me a detail that feels most urgent, and we’ll address that first.");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>}else{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>push("assistant","I hear you. What outcome would feel safest or most helpful right now?");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">function escapeHtml(s){return s.replace(/[&amp;&lt;&gt;\"']/g,m=&gt;({"&amp;":"&amp;amp;","&lt;":"&amp;lt;","&gt;":"&amp;gt;","\"":"&amp;quot;","'":"&amp;#39;"}[m]));}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">function render(){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>EL.innerHTML=`</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="ban-header"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;div class="ban-logo"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;div&gt;&lt;div class="ban-title"&gt;Ban ABA Empowerment Guide&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;div class="ban-sub"&gt;Neurodiversity-affirming, educational advocacy. Not legal/clinical advice.&lt;/div&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="ban-panel"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;div class="ban-small"&gt;Start here:&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;div class="ban-btns"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>${TOPICS.map(t=&gt;`&lt;button class="ban-btn" data-topic="${t.id}"&gt;${t.label}&lt;/button&gt;`).join("")}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="ban-panel"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;div class="ban-log"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>${state.log.map(m=&gt;`&lt;div class="ban-msg ${m.role==="system"?"system":""}"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;strong&gt;${m.role==="assistant"?"Guide":m.role==="system"?"Info":"You"}:&lt;/strong&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div&gt;${escapeHtml(m.text).replace(/\\n/g,"&lt;br&gt;")}&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;`).join("")}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;div class="ban-row"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>&lt;input type="text" class="ban-input" placeholder="Type here…" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>&lt;button class="ban-cta" data-send&gt;Send&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;div class="ban-actions" style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>&lt;button class="ban-cta alt" data-save&gt;Save progress&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>&lt;button class="ban-cta" data-export&gt;Export notes&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>&lt;button class="ban-cta alt" data-clear&gt;Clear conversation&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;div class="ban-small"&gt;Messages are stored locally in your browser.&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>EL.querySelectorAll("[data-topic]").forEach(b=&gt;b.onclick=()=&gt;pickTopic(TOPICS.find(t=&gt;t.id===b.dataset.topic)));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>const input=EL.querySelector(".ban-input");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>EL.querySelector("[data-send]").onclick=()=&gt;{handleUserInput(input.value);input.value="";input.focus();};</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>input.addEventListener("keydown",e=&gt;{if(e.key==="Enter"){e.preventDefault();EL.querySelector("[data-send]").click();}});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>EL.querySelector("[data-save]").onclick=()=&gt;{save();push("system","Progress saved locally.");};</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>EL.querySelector("[data-export]").onclick=exportTxt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>EL.querySelector("[data-clear]").onclick=()=&gt;{if(confirm("Clear this conversation?"))clearSession();};</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">render();announceGreeting();</span></p>
+<p class="p1"><span class="s1">});</span></p>
+<p class="p1"><span class="s1">&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
