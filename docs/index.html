@@ -1,3 +1,73 @@
-<!DOCTYPE html><meta charset="utf-8"><title>OK</title>
-<style>body{font:16px system-ui;background:#0e0f12;color:#e9ecf1;padding:2rem}</style>
-<p>It works ✅ — HTML is rendering from /docs.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Ban ABA Empowerment Guide</title>
+<style>
+:root{
+  --ban-primary:#5b6bff;--ban-accent:#2de39f;
+  --ban-bg:#0e0f12;--ban-panel:#171a21;
+  --ban-text:#e9ecf1;--ban-muted:#aab3c2;
+}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  background:var(--ban-bg);color:var(--ban-text);padding:1rem;}
+#banaba-chatbot *{box-sizing:border-box}
+#banaba-chatbot{max-width:720px;margin:0 auto;border:1px solid #1f2430;
+  border-radius:16px;padding:16px;background:var(--ban-bg);}
+.ban-header{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.ban-logo{width:36px;height:36px;border-radius:8px;
+  background:linear-gradient(135deg,var(--ban-primary),var(--ban-accent))}
+.ban-title{font-weight:700;font-size:18px}
+.ban-sub{color:var(--ban-muted);font-size:13px}
+.ban-panel{background:var(--ban-panel);border:1px solid #232a39;
+  border-radius:14px;padding:14px;margin:12px 0}
+.ban-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.ban-btn{background:#11141a;color:var(--ban-text);border:1px solid #2a3346;
+  border-radius:999px;padding:8px 12px;font-size:13px;cursor:pointer}
+.ban-btn:hover{border-color:var(--ban-accent)}
+.ban-cta{background:var(--ban-primary);border:none;color:#fff;
+  padding:8px 12px;border-radius:10px;font-weight:600;cursor:pointer}
+.ban-cta.alt{background:#182044;color:#cfe0ff;border:1px solid #31448a}
+.ban-log{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.ban-msg{background:#0f1218;border:1px solid #1e2431;border-radius:12px;
+  padding:10px;font-size:14px}
+.ban-msg.system{background:#111826;border-color:#27314a}
+.ban-row{display:flex;gap:8px;margin-top:10px}
+.ban-input{flex:1;background:#0f1218;color:var(--ban-text);
+  border:1px solid #2a3346;border-radius:10px;padding:10px}
+.ban-small{font-size:12px;color:var(--ban-muted)}
+@media(max-width:560px){.ban-sub{display:none}}
+</style>
+</head>
+<body>
+<div id="banaba-chatbot">Loading…</div>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+const EL=document.getElementById("banaba-chatbot");
+if(!EL)return;
+const TOPICS=[
+ {id:"iep",label:"School / IEP",intro:"Let’s start by unpacking your IEP goals together. What’s coming up in your meeting or documentation that feels unclear or unfair?",follow:"Would you like to draft language for your next meeting or parent input letter?"},
+ {id:"sdp",label:"Self Determination",intro:"Okay, we’ll focus on the Self-Determination Program. Let’s clarify where you are in the process and how to structure your IPP or PCP around your autonomy.",follow:"Would you like help outlining your person-centered plan or self-direction goals?"},
+ {id:"transition",label:"Transition to Adulthood",intro:"Let’s look ahead to adulthood supports and services. We can map out independent living, employment, and advocacy priorities at your pace.",follow:"Would you like to build a checklist for transition milestones?"},
+ {id:"aba",label:"ABA pressure",intro:"Let’s take a deep breath together. You’re not wrong for questioning what’s being pushed. Tell me what kind of pressure or language they’re using.",follow:"Do you want to practice how to say no to ABA or request alternative supports?"},
+ {id:"musical",label:"My child is very musical",intro:"Wonderful! Music is a strength and a regulation tool. Let’s explore how to include that in your IEP or PCP goals meaningfully.",follow:"Would you like help drafting a goal that honors your child’s musical interests?"},
+ {id:"comm",label:"Communication Options",intro:"Communication is a right, not a reward. Let’s identify which AAC or multimodal methods best support your or your child’s authentic voice.",follow:"Would you like to list the communication methods you want documented in your plan?"},
+ {id:"peers",label:"Autistic Peer Support",intro:"Peer connection matters. Let’s find spaces and supports where autistic voices lead the conversation safely.",follow:"Would you like to see trusted peer-led communities or resources?"}
+];
+let state={log:load()||[],currentTopic:null};
+function load(){try{return JSON.parse(localStorage.getItem("banaba_session_v1")||"[]");}catch(e){return[];}}
+function save(){localStorage.setItem("banaba_session_v1",JSON.stringify(state.log));}
+function push(role,text){state.log.push({role,text,ts:Date.now()});save();render();}
+function exportTxt(){const lines=state.log.map(m=>`[${new Date(m.ts).toISOString()}] ${m.role.toUpperCase()}: ${m.text}`).join("\\n");const blob=new Blob([lines],{type:"text/plain"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="banaba-notes.txt";a.click();}
+function clearSession(){state.log=[];save();render();announceGreeting();}
+function announceGreeting(){if(state.log.length===0){push("system","Hi! Autistic Dr. Henny has programmed this chatbot with the #banABA philosophies to empower you. Ask away. You’re safe to share what’s happening. Let’s take it one step at a time. What’s happening right now that you need help with?");}}
+function pickTopic(t){state.currentTopic=t.id;push("assistant","Topic selected: "+t.label);push("assistant",t.intro);push("assistant",t.follow+" (yes/no)");}
+function handleUserInput(val){if(!val.trim())return;push("user",val.trim());const topic=TOPICS.find(x=>x.id===state.currentTopic);if(!topic){const guess=TOPICS.find(t=>val.toLowerCase().includes(t.label.toLowerCase().split(\" \")[0]));if(guess){pickTopic(guess);return;}push(\"assistant\",\"Thanks for sharing. You can tap a topic button above to get targeted help, or tell me more about what’s happening.\");return;}if(/(^|\\s)yes\\b/i.test(val)){switch(topic.id){case\"iep\":push(\"assistant\",\"Starter language:\\n“Please note my Parent Input: We request the team consider supports that reduce harm and respect autonomy. We decline compliance-based goals and request sensory/regulation supports aligned with our child’s strengths.”\");break;case\"sdp\":push(\"assistant\",\"PCP outline:\\n• Who I am & how I communicate\\n• What a good day looks like\\n• Supports that help (non-ABA)\\n• Risks to avoid\\n• Autonomy goals\\n• Budget categories I value\");break;case\"transition\":push(\"assistant\",\"Transition checklist:\\n• Agency contacts\\n• Benefits planning\\n• Transportation\\n• Work/education plan\\n• Housing prefs\\n• Self-advocacy & decision-making supports\");break;case\"aba\":push(\"assistant\",\"Refusal script:\\n“We decline ABA. Please document our refusal without retaliation. We request trauma-informed, relationship-based supports that honor autonomy and sensory needs.”\");break;case\"musical\":push(\"assistant\",\"Goal idea:\\n“Given access to music-based regulation tools, student will self-initiate a 3–5 min music break to co-regulate during challenging tasks in 4/5 opportunities.”\");break;case\"comm\":push(\"assistant\",\"Document methods (AAC app, gestures, typing). Add: “Communication is not contingent on compliance; access is continuous across environments.”\");break;case\"peers\":push(\"assistant\",\"Seek peer-led communities where autistic voices lead. I can suggest categories and safety signs to look for.\");break;}push(\"assistant\",\"Want to add this to your notes or keep drafting?\");}else if(/(^|\\s)no\\b/i.test(val)){push(\"assistant\",\"Okay. Tell me a detail that feels most urgent, and we’ll address that first.\");}else{push(\"assistant\",\"I hear you. What outcome would feel safest or most helpful right now?\");}}
+function escapeHtml(s){return s.replace(/[&<>\"']/g,m=>({\"&\":\"&amp;\",\"<\":\"&lt;\",\">\":\"&gt;\",\"\\\"\":\"&quot;\",\"'\":\"&#39;\"}[m]));}
+function render(){EL.innerHTML=`<div class=\"ban-header\"><div class=\"ban-logo\"></div><div><div class=\"ban-title\">Ban ABA Empowerment Guide</div><div class=\"ban-sub\">Neurodiversity-affirming, educational advocacy. Not legal/clinical advice.</div></div></div><div class=\"ban-panel\"><div class=\"ban-small\">Start here:</div><div class=\"ban-btns\">${TOPICS.map(t=>`<button class=\"ban-btn\" data-topic=\"${t.id}\">${t.label}</button>`).join(\"\")}</div></div><div class=\"ban-panel\"><div class=\"ban-log\">${state.log.map(m=>`<div class=\"ban-msg ${m.role===\"system\"?\"system\":\"\"}\"><strong>${m.role===\"assistant\"?\"Guide\":m.role===\"system\"?\"Info\":\"You\"}:</strong><div>${escapeHtml(m.text).replace(/\\n/g,\"<br>\")}</div></div>`).join(\"\")}</div><div class=\"ban-row\"><input type=\"text\" class=\"ban-input\" placeholder=\"Type here…\"/><button class=\"ban-cta\" data-send>Send</button></div><div class=\"ban-actions\" style=\"margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;\"><button class=\"ban-cta alt\" data-save>Save progress</button><button class=\"ban-cta\" data-export>Export notes</button><button class=\"ban-cta alt\" data-clear>Clear conversation</button></div><div class=\"ban-small\">Messages are stored locally in your browser.</div></div>`;EL.querySelectorAll(\"[data-topic]\").forEach(b=>b.onclick=()=>pickTopic(TOPICS.find(t=>t.id===b.dataset.topic)));const input=EL.querySelector(\".ban-input\");EL.querySelector(\"[data-send]\").onclick=()=>{handleUserInput(input.value);input.value=\"\";input.focus();};input.addEventListener(\"keydown\",e=>{if(e.key===\"Enter\"){e.preventDefault();EL.querySelector(\"[data-send]\").click();}});EL.querySelector(\"[data-save]\").onclick=()=>{save();push(\"system\",\"Progress saved locally.\");};EL.querySelector(\"[data-export]\").onclick=exportTxt;EL.querySelector(\"[data-clear]\").onclick=()=>{if(confirm(\"Clear this conversation?\"))clearSession();};}
+render();announceGreeting();
+});
+</script>
+</body>
+</html>
